@@ -34,6 +34,20 @@
 
 圖裡的白色標尺每一個刻度是 10 格。兩種風格的規格和選法寫在 [references/styles.md](references/styles.md)；其他風格也可以做。
 
+## 提示詞範例
+
+這兩張圖是兩種預設風格的角色當初交給影像模型的描述方式：先有一段共用的風格描述，再替每位角色寫一小段描述和幾個主要顏色。寫自己的角色描述時可以照這個形式。圖本身是 AI 生成的，不是重繪後的像素圖。
+
+**色塊 Q 版**
+
+![五位色塊 Q 版角色的提示詞表](assets/prompt_sheet_chibi_flat.webp)
+
+**輪廓街拍**
+
+![五位輪廓街拍角色的提示詞表](assets/prompt_sheet_outline_street.webp)
+
+完整的提示詞範本在 [references/prompts.md](references/prompts.md)。
+
 ## 安裝
 
 需要 Claude Code 和 Python 3。
@@ -140,7 +154,7 @@ my_character/
 | `scripts/pxlib.py` | 共用的函式 |
 | `references/` | 設定檔格式、提示詞範本、風格、影像生成說明 |
 | `examples/` | 設定檔範例 |
-| `assets/` | 風格圖解、風格參照圖、banner、README 的範例圖 |
+| `assets/` | 風格圖解、風格參照圖、banner、提示詞表、README 的範例圖 |
 
 ## 已知的限制
 

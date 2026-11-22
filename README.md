@@ -36,6 +36,20 @@ After steps 2, 3 and 4, Claude stops and shows you the result, and continues onl
 
 Each tick on the white ruler is 10 cells. The specs for both styles, and how to choose, are in [references/styles.md](references/styles.md). Other styles work too.
 
+## Prompt examples
+
+These two sheets show how the characters behind each preset style were described to the image model: a shared style description, then a short description and a few palette colors per character. Use them as a model for writing your own character descriptions. The sheets themselves are AI-generated images, not redrawn pixel art.
+
+**chibi-flat**
+
+![Prompt sheet for five chibi-flat characters](assets/prompt_sheet_chibi_flat.webp)
+
+**outline-street**
+
+![Prompt sheet for five outline-street characters](assets/prompt_sheet_outline_street.webp)
+
+The full prompt templates are in [references/prompts.md](references/prompts.md).
+
 ## Install
 
 You need Claude Code and Python 3.
@@ -142,7 +156,7 @@ The sprite sheet, JSON and anchor are plain files, so the characters drop straig
 | `scripts/pxlib.py` | Shared functions |
 | `references/` | Config format, prompt templates, styles, image generation notes |
 | `examples/` | Example config files |
-| `assets/` | Style diagrams, style reference images, banner, README examples |
+| `assets/` | Style diagrams, style reference images, banner, prompt sheets, README examples |
 
 ## Known limits
 
