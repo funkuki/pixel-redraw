@@ -132,14 +132,14 @@ Japanese cozy pixel art, retro 16-bit RPG character sprite aesthetic, contempora
 - Limited palette of approximately 12–16 colors per character.
 - Two or three discrete shading levels per material.
 - No smooth gradients, lighting effects, or dithering noise.
-- Avoid thick black outlines; define shapes using darker local colors.
+- A thin dark-brown outline, one pixel wide, around every shape. No thick black outlines.
 
 ## 3. CHARACTER PROPORTIONS
 
-- Super-deformed chibi proportions, approximately 2.3–2.5 heads tall.
-- Oversized rounded head with a compact, softly shaped body.
-- Head occupies approximately 40–43% of total character height.
-- Short arms and legs with simplified anatomy.
+- Stylized proportions, approximately 3.5–4 heads tall.
+- Rounded head, slightly large for the body, with a slim, softly shaped body.
+- Head occupies approximately 28–30% of total character height.
+- Arms and legs with simplified anatomy.
 - Small hands and feet, clearly readable at sprite resolution.
 - Softly rounded silhouette, slightly wider around the head and clothing.
 - Consistent body proportions suitable for future sprite animation.
@@ -191,7 +191,7 @@ Keep character colors consistent across future generations.
 
 ## 7. SPRITE CANVAS & COMPOSITION
 
-- Design the character for a logical 96 × 128 pixel sprite canvas.
+- Design the character for a logical 112 × 144 pixel sprite canvas; the character is about 115 pixels tall.
 - Use one consistent square-pixel unit throughout the entire character.
 - Render at a crisp integer upscale using nearest-neighbor scaling.
 - Keep character centered horizontally.
@@ -223,7 +223,7 @@ Avoid:
 - Text, labels, borders, UI elements, or watermarks.
 
 FINAL OUTPUT:
-One clean, polished, production-ready Japanese cozy pixel art MASTER SPRITE with consistent grid spacing, recognizable character identity, clear silhouette, and charming 2.3–2.5-head-tall proportions.
+One clean, polished, production-ready Japanese cozy pixel art MASTER SPRITE with consistent grid spacing, recognizable character identity, clear silhouette, and charming 3.5–4-head-tall proportions.
 ```
 
 範本要求透明背景，但模型常常給白底，或把透明畫成灰白棋盤格。拿到圖先看背景：真的透明或白底就照 styles.md 用 `"remove_background": "border"`；畫成棋盤格的要重新生成，並把第 7 節的背景那兩行改成 `Pure solid white background (#FFFFFF).`。
