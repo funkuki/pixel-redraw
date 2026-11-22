@@ -8,7 +8,9 @@
 
 Redraw AI-generated "pixel-style" characters on a real grid to get true pixel art, then assemble them into ready-to-use sprite sheets and animations. This is a Skill for [Claude Code](https://claude.com/claude-code).
 
-Pixel art drawn by an image model is not pixel art once you zoom in: the cells vary in size, the edges have gradients, and one flat area contains dozens of near-identical colors. pixel-redraw treats the AI image only as a reference for the look. It finds the image's grid with code and decides one color for each cell, giving you an image with one color per cell and a small palette.
+AI-generated pixel images look like pixel art, but once you zoom in the pixels vary in size, the edges are blurry, there are too many colors, and the character is hard to keep consistent from one image to the next. For indie game developers who make characters with generative AI, this is a very practical pain point.
+
+pixel-redraw treats the AI image only as a reference for the look. It finds the image's grid with code and decides one color for each cell, giving you an image with one color per cell and a small palette. This is closer to a real digital production workflow than to a one-step AI image conversion: the value it tries to offer is how to turn a single AI character image into a set of character assets you can keep using.
 
 > The skill's own instructions (`SKILL.md`, `references/`) are written in Traditional Chinese. Claude reads them and can talk to you in any language.
 
