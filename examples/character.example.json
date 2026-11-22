@@ -1,0 +1,67 @@
+{
+ "name": "hero",
+ "portrait": {
+  "source": "source/hero_portrait.png",
+  "pitch_hint": 6,
+  "background": "auto",
+  "remove_background": "all",
+  "keep_largest": true,
+  "fixes": [
+   {"legend": { "W": 7, "I": 9, "c": 3 }, "rows": [45], "col": 53, "pattern": "  cWWWWccc"},
+   {"legend": { "W": 7, "I": 9, "c": 3 }, "rows": [46], "col": 53, "pattern": "ccWIIIIWcc"},
+   {"legend": { "W": 7, "I": 9, "c": 3 }, "rows": [48, 51], "row_range": true, "col": 53, "pattern": "WWIIIIIIWW"},
+   {
+    "cells": [
+     [62, 66],
+     [63, 66]
+    ],
+    "color": 7
+   }
+  ]
+ },
+ "sheet": {
+  "source": "source/hero_sheet.png",
+  "background": "auto",
+  "frame": [64, 64],
+  "anchor": [32, 62],
+  "height_cells": 50,
+  "columns": 8,
+  "sections": [
+   {"name": "hero", "box": [55, 15, 258, 328], "names": ["hero"], "scale": "height"},
+   {"name": "turn", "box": [300, 72, 822, 262], "names": ["front", "side_right", "back", "side_left"], "scale": "height", "scale_sprite": "front"},
+   {"name": "walk", "box": [40, 618, 832, 762], "count": 8, "scale": "height"},
+   {"name": "run", "box": [895, 618, 1512, 762], "count": 6, "scale": { "head_of": "walk" }},
+   {"name": "act", "box": [285, 342, 925, 522], "names": ["wave", "read", "camera", "run_pose", "sit"], "scale": { "head_of": "turn" }},
+   {"name": "inter", "box": [955, 338, 1445, 522], "names": ["drink", "laptop", "travel"], "scale": { "head_of": "turn" }},
+   {"name": "expr", "box": [845, 55, 1532, 212], "names": ["expr_neutral", "expr_happy", "expr_surprised", "expr_wink", "expr_sleep"], "scale": { "head_of": "turn", "head_frac": 1.0 }, "align": "center"}
+  ],
+  "palette_from": "out/hero_data.npz",
+  "fixes": {
+   "front": [
+    {
+     "flood": [31, 58],
+     "color": null
+    }
+   ]
+  }
+ },
+ "animations": [
+  {"name": "hero", "frames": ["hero"]},
+  {"name": "turnaround", "frames": ["front", "side_right", "back", "side_left"], "frame_ms": 400},
+  {"name": "idle_down", "frames": ["front"]},
+  {"name": "idle_up", "frames": ["back"]},
+  {"name": "idle_right", "frames": ["side_right"]},
+  {"name": "idle_left", "mirror": "idle_right"},
+  {"name": "walk_right", "section": "walk", "frame_ms": 100},
+  {"name": "walk_left", "mirror": "walk_right"},
+  {"name": "walk_down", "step": { "base": "front", "cycle": "walk" }, "frame_ms": 100},
+  {"name": "walk_up", "step": { "base": "back", "cycle": "walk", "swap_sides": true }, "frame_ms": 100},
+  {"name": "run_right", "section": "run", "frame_ms": 80},
+  {"name": "run_left", "mirror": "run_right"},
+  {"name": "run_down", "step": { "base": "front", "cycle": "run" }, "frame_ms": 80},
+  {"name": "run_up", "step": { "base": "back", "cycle": "run", "swap_sides": true }, "frame_ms": 80},
+  {"name": "actions", "section": "act"},
+  {"name": "interactions", "section": "inter"},
+  {"name": "expressions", "section": "expr"}
+ ]
+}

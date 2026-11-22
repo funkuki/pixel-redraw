@@ -1,0 +1,51 @@
+{
+ "name": "hero",
+ "portrait": {
+  "source": "source/hero_portrait.png",
+  "pitch_hint": 8,
+  "remove_background": "border",
+  "holes": [
+   [40, 96]
+  ]
+ },
+ "sheet": {
+  "background": "#ffffff",
+  "bg_tolerance": 60,
+  "pitch": "auto",
+  "pitch_hint": 8,
+  "enclosed": "keep",
+  "trim_fringe": 180,
+  "grid": {
+   "rows": 2,
+   "cols": 6
+  },
+  "frame": [112, 144],
+  "anchor": [56, 140],
+  "height_cells": 115,
+  "palette_from": "out/hero_data.npz",
+  "sections": [
+   {"name": "turn", "source": "source/hero_sheet_stand.png", "row": 0, "names": ["front", "front34", "right", "back34", "back", "wave"]},
+   {"name": "expr", "source": "source/hero_sheet_stand.png", "row": 1, "names": ["idle_a", "idle_b", "blink", "smile", "surprised", "shy"]},
+   {"name": "walk", "source": "source/hero_sheet_walk.png", "row": 0, "count": 6},
+   {"name": "run", "source": "source/hero_sheet_walk.png", "row": 1, "count": 6, "keep_lift": true}
+  ],
+  "fixes": {
+   "walk_2": [
+    {
+     "flood": [55, 128],
+     "color": null
+    }
+   ]
+  }
+ },
+ "animations": [
+  {"name": "turnaround", "section": "turn", "frame_ms": 400},
+  {"name": "idle", "frames": ["idle_a", "idle_b"], "frame_ms": 500},
+  {"name": "blink", "frames": ["idle_a", "blink", "idle_a"], "frame_ms": 120, "loop": false},
+  {"name": "walk_right", "section": "walk", "frame_ms": 125},
+  {"name": "walk_left", "mirror": "walk_right"},
+  {"name": "run_right", "section": "run", "frame_ms": 100},
+  {"name": "run_left", "mirror": "run_right"},
+  {"name": "expressions", "section": "expr"}
+ ]
+}
