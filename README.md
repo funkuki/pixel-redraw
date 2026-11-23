@@ -105,6 +105,32 @@ If you use the API:
 
 Attach a style reference image when generating the portrait (`assets/ref_chibi_flat.png` or `assets/ref_outline_street.png`). With a text prompt alone, the proportions and the cell size drift far from the chosen style. Prompt templates are in [references/prompts.md](references/prompts.md).
 
+## Suggestion: use PixelLab for step 3
+
+This section is a recommendation from testing. **The skill does not include it yet**; the workflow is still steps 1–5 above.
+
+[PixelLab](https://www.pixellab.ai/) is a service built for pixel art. Its output is already one color per cell with no semi-transparency, and it can be held to a palette. We tested it with a portrait (96×96) and a sprite (64×64) redrawn by this workflow as reference images:
+
+| Method | Cost per direction | Result |
+|---|---|---|
+| `create-character-v3`, rotate the reference into 4 directions | 1–2 generations (all 4 directions) | The front view is identical to the reference; side and back views keep the proportions |
+| Animation `pixminimax`, 8-frame walk | 1 generation | Best: a clear stride, a real walk in all four directions, and with `target_palette` every color stays in the original palette |
+| Animation `skeleton-v3` | 3 generations | Stays facing front, but the steps are very small |
+| Animation `v3` (text) | 3 generations | Turns to a three-quarter view while walking; eyes half close in the middle frames |
+| Animation `template` | about 1 generation | Cannot take a palette; noise on the face |
+
+The suggested workflow is **1 → 2 → 3 → 4b → 5**:
+
+1. **Idea**: as before.
+2. **Portrait**: generate as before, then redraw it on the grid (step 4 for the portrait only).
+3. **Sprite sheet with PixelLab instead**: rotate the redrawn portrait into four directions, then generate each animation with `pixminimax`, passing the portrait's palette as `target_palette`. No mirroring is needed, and up and down are no longer simplified.
+4. **Check and fix only**: the frames need no grid search or palette extraction. Confirm there are no colors outside the palette, then check the face, hands and feet frame by frame at high zoom.
+5. **Animation**: PixelLab canvases vary in size (for example 84×84) and the character drifts 1–3 cells between frames, so re-align each frame to the anchor and normalize the frame size.
+
+Cost: PixelLab's free plan has 40 generations; the paid plan is 2,000 a month for US$12. With a walk and a run in four directions plus six front-facing actions, one character takes about 16–25 generations.
+
+Not yet verified: generating the portrait from text in PixelLab, custom actions such as reading or drinking, and whether a three-quarter-view portrait works as a reference.
+
 ## Pixel rules
 
 These apply at every step:
