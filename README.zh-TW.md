@@ -117,6 +117,18 @@ my_character/
 | 動畫 `v3`（文字） | 3 次 | 會轉成斜側面在走，中間幾格眼睛半閉 |
 | 動畫 `template`（骨架範本） | 約 1 次 | 不能指定色盤，臉上有雜點 |
 
+**轉身。** 最左邊是用這套流程重繪的立繪，右邊四張是 PixelLab 轉出的正面、右、背面、左。
+
+![PixelLab 用重繪立繪轉出四方向](assets/pixellab_rotate.png)
+
+**`pixminimax` 走路。** 最左邊是用這套流程重繪的小人，右邊是 PixelLab 生成的四方向走路，每個方向花 1 次。
+
+![PixelLab pixminimax 四方向走路](assets/pixellab_walk_sprite.gif)
+
+**三種動畫模式比較。** 由左到右是 `v3`、`skeleton-v3`、`pixminimax`，都是立繪尺寸向下走。
+
+![三種動畫模式比較](assets/pixellab_modes.gif)
+
 建議的流程是 **1 → 2 → 3 → 4b → 5**：
 
 1. **想法**：照原本的方式。

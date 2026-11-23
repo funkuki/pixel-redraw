@@ -119,6 +119,18 @@ This section is a recommendation from testing. **The skill does not include it y
 | Animation `v3` (text) | 3 generations | Turns to a three-quarter view while walking; eyes half close in the middle frames |
 | Animation `template` | about 1 generation | Cannot take a palette; noise on the face |
 
+**Rotation.** On the left is the portrait redrawn by this workflow; the four on the right are PixelLab's front, right, back and left views.
+
+![PixelLab rotating the redrawn portrait into four directions](assets/pixellab_rotate.png)
+
+**`pixminimax` walk.** On the left is the sprite redrawn by this workflow; on the right is PixelLab's walk in four directions, 1 generation each.
+
+![PixelLab pixminimax walk in four directions](assets/pixellab_walk_sprite.gif)
+
+**Three animation modes.** From left to right: `v3`, `skeleton-v3` and `pixminimax`, each walking toward the viewer at portrait size.
+
+![Comparison of three animation modes](assets/pixellab_modes.gif)
+
 The suggested workflow is **1 → 2 → 3 → 4b → 5**:
 
 1. **Idea**: as before.
