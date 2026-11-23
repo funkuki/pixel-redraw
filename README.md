@@ -118,6 +118,8 @@ This section is a recommendation from testing. **The skill does not include it y
 | Animation `skeleton-v3` | 3 generations | Stays facing front, but the steps are very small |
 | Animation `v3` (text) | 3 generations | Turns to a three-quarter view while walking; eyes half close in the middle frames |
 | Animation `template` | about 1 generation | Cannot take a palette; noise on the face |
+| `pixminimax`, 8-frame run | 1 generation | Long strides and swinging hair in all four directions; more natural than the simplified up and down runs made from standing poses |
+| `pixminimax`, custom actions described in text | 1 generation | Waving, drinking, reading, taking a photo, sitting and cheering all work; props are drawn by PixelLab and stay in the palette |
 
 **Rotation.** On the left is the portrait redrawn by this workflow; the four on the right are PixelLab's front, right, back and left views.
 
@@ -131,6 +133,14 @@ This section is a recommendation from testing. **The skill does not include it y
 
 ![Comparison of three animation modes](assets/pixellab_modes.gif)
 
+**`pixminimax` run.** On the left is the sprite redrawn by this workflow; on the right is PixelLab's run toward the viewer, right, away and left, 1 generation each.
+
+![PixelLab pixminimax run in four directions](assets/pixellab_run_sprite.gif)
+
+**Custom actions.** From left to right: waving, drinking, reading, taking a photo, sitting down and cheering, all facing front, 1 generation each, each described in one English sentence. PixelLab draws the props itself and holds them to the original palette, which is why the book is brown instead of green. Most actions reach a pose and hold it, so the last few frames are nearly the same: take the last frame as a single action pose. They are not enough for a looping animation. Close-up expressions are not possible; animations are always full body.
+
+![PixelLab custom actions](assets/pixellab_actions_sprite.gif)
+
 The suggested workflow is **1 → 2 → 3 → 4b → 5**:
 
 1. **Idea**: as before.
@@ -141,7 +151,7 @@ The suggested workflow is **1 → 2 → 3 → 4b → 5**:
 
 Cost: PixelLab's free plan has 40 generations; the paid plan is 2,000 a month for US$12. With a walk and a run in four directions plus six front-facing actions, one character takes about 16–25 generations.
 
-Not yet verified: generating the portrait from text in PixelLab, custom actions such as reading or drinking, and whether a three-quarter-view portrait works as a reference.
+Not yet verified: generating the portrait from text in PixelLab, whether a three-quarter-view portrait works as a reference, and custom actions at portrait size.
 
 ## Pixel rules
 
