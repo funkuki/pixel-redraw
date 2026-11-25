@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/banner.png" alt="pixel-redraw：true pixel art" width="100%">
+  <img src="assets/banner.png" alt="pixel-redraw：把 AI 角色圖變成精靈圖素材" width="100%">
 </p>
 
 <p align="center"><a href="README.md">English</a> | 繁體中文</p>
 
 # pixel-redraw
 
-把影像模型畫的「像素風」角色，依網格重繪成真正的像素圖，再排成可以直接用的精靈圖表和動畫。這是一個 [Claude Code](https://claude.com/claude-code) 的 Skill。
+把影像模型畫的「像素風」角色，依網格重繪成格子整齊的像素圖，再排成可以直接用的精靈圖表和動畫。這是一個 [Claude Code](https://claude.com/claude-code) 的 Skill。
 
 AI 生成的像素圖看起來像 Pixel Art，但放大後像素大小不一、邊緣模糊、色彩過多，角色也難以保持一致。對使用生成式 AI 製作角色的獨立遊戲開發者而言，這是很實際的痛點。
 

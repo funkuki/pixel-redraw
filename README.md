@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/banner.png" alt="pixel-redraw: true pixel art" width="100%">
+  <img src="assets/banner.png" alt="pixel-redraw: AI character to sprite assets" width="100%">
 </p>
 
 <p align="center">English | <a href="README.zh-TW.md">繁體中文</a></p>
 
 # pixel-redraw
 
-Redraw AI-generated "pixel-style" characters on a real grid to get true pixel art, then assemble them into ready-to-use sprite sheets and animations. This is a Skill for [Claude Code](https://claude.com/claude-code).
+Redraw AI-generated "pixel-style" characters on a real grid into clean, grid-aligned pixel art, then assemble them into ready-to-use sprite sheets and animations. This is a Skill for [Claude Code](https://claude.com/claude-code).
 
 AI-generated pixel images look like pixel art, but once you zoom in the pixels vary in size, the edges are blurry, there are too many colors, and the character is hard to keep consistent from one image to the next. For indie game developers who make characters with generative AI, this is a very practical pain point.
 
